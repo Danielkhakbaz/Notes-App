@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🏗️👷 Styling, testing and building your project before committing'
+
+# Check Prettier standards
+yarn check-format ||
+(
+    echo '🤢🤮🤢🤮 Its FOKING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
+            Prettier Check Failed. Run yarn format, add changes and try commit again.';
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
