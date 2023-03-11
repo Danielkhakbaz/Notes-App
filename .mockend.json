@@ -1,26 +1,53 @@
 {
-  "data": {
-    "products": [
-      {
-        "id": 1,
-        "title": "Product No.1",
-        "quantity": 0
-      },
-      {
-        "id": 2,
-        "title": "Product No.2",
-        "quantity": 0
-      },
-      {
-        "id": 3,
-        "title": "Product No.3",
-        "quantity": 0
-      },
-      {
-        "id": 4,
-        "title": "Product No.4",
-        "quantity": 0
+  "Post": {
+    "_": {
+      "items": 10,
+      "data": [
+        {
+          "title": "First title",
+          "body": "You can use your own data or have random values generated for you."
+        },
+        {
+          "title": "Second title",
+          "body": "The rest of the posts will have random values"
+        }
+      ]
+    },
+    "cover": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
+    },
+    "title": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
       }
-    ]
+    },
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "category": {
+      "string": ["one", "two", "three"]
+    },
+    "isDraft": {
+      "boolean": {}
+    },
+    "views": {
+      "int": {
+        "min": 0,
+        "max": 1000
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "comments": {
+      "hasMany": "Comment"
+    }
   }
 }

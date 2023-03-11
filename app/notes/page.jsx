@@ -13,17 +13,17 @@ export const metadata = {
   },
 };
 
-const getNotes = async () => {
-  const result = await fetch("http://127.0.0.1:8090/api/collections/notes");
-  const data = await result.json();
+// const getNotes = async () => {
+// const result = await fetch("http://127.0.0.1:8090/api/collections/notes");
+// const data = await result.json();
 
-  return data;
-};
+// return data;
+// };
 
 const NotesPage = async () => {
-  const notes = await getNotes();
+  // const notes = await getNotes();
 
-  console.log(notes);
+  // console.log(notes);
 
   return (
     <>
