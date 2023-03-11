@@ -19,7 +19,7 @@ const Home = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <h1 className="text-5xl font-medium">
+            <h1 className="font-medium text-5xl">
               this is <span className="font-bold text-6xl">Note</span>{" "}
               <span className="font-bold text-6xl">App</span>.
             </h1>

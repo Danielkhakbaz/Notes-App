@@ -1,8 +1,12 @@
 "use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Navbar = ({ theme, setTheme }) => {
+  const path = usePathname().slice(1);
+
   return (
     <>
       <nav className="navbar bg-base-100">
@@ -18,12 +22,17 @@ const Navbar = ({ theme, setTheme }) => {
           <Link href="/notes">
             <button className="btn btn-ghost">Notes</button>
           </Link>
-          <button
-            className="btn btn-ghost text-xl"
-            onClick={() => setTheme(theme === "light" ? "dracula" : "light")}
-          >
-            {theme === "light" ? <MdLightMode /> : <MdDarkMode />}
-          </button>
+          {path === "notes" && (
+            <button className="btn btn-success">Add Note</button>
+          )}
+          <label className="swap swap-rotate btn btn-ghost text-xl">
+            <input
+              type="checkbox"
+              onClick={() => setTheme(theme === "light" ? "dracula" : "light")}
+            />
+            <MdLightMode className="swap-off fill-current" />
+            <MdDarkMode className="swap-on fill-current" />
+          </label>
         </div>
       </nav>
     </>
