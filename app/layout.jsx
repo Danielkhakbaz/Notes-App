@@ -10,9 +10,9 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en" data-theme={theme}>
       <body>
-        <main>
+        <main className="min-h-screen flex flex-col">
           <Navbar theme={theme} setTheme={setTheme} />
-          {children}
+          <section className="py-4">{children}</section>
           <Footer />
         </main>
       </body>

@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { uuid } from "uuidv4";
+import LayoutContainer from "./layout/layout-container";
 
 export const metadata = {
   title: "Notes | Notes App",
@@ -13,46 +14,205 @@ export const metadata = {
   },
 };
 
-// const getNotes = async () => {
-// const result = await fetch("http://127.0.0.1:8090/api/collections/notes");
-// const data = await result.json();
-
-// return data;
-// };
-
 const NotesPage = async () => {
-  // const notes = await getNotes();
-
-  // console.log(notes);
+  const notes = [
+    {
+      id: uuid(),
+      title: "The Important Note",
+      text: "LA Lakers is the best team in the world! LA Lakers is the best team in the world! LA Lakers is the best team in the world!",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "2",
+      text: "22",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "3",
+      text: "33",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "4",
+      text: "44",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "5",
+      text: "55",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "6",
+      text: "66",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "7",
+      text: "77",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "8",
+      text: "88",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "9",
+      text: "99",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "0",
+      text: "00",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "4",
+      text: "44",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "5",
+      text: "55",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "6",
+      text: "66",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "7",
+      text: "77",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "8",
+      text: "88",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "9",
+      text: "99",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "0",
+      text: "00",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "3",
+      text: "33",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "4",
+      text: "44",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "5",
+      text: "55",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "6",
+      text: "66",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "7",
+      text: "77",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "8",
+      text: "88",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "9",
+      text: "99",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "0",
+      text: "00",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "4",
+      text: "44",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "5",
+      text: "55",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "6",
+      text: "66",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "7",
+      text: "77",
+      size: "medium",
+    },
+    {
+      id: uuid(),
+      title: "8",
+      text: "88",
+      size: "large",
+    },
+    {
+      id: uuid(),
+      title: "9",
+      text: "99",
+      size: "small",
+    },
+    {
+      id: uuid(),
+      title: "0",
+      text: "00",
+      size: "medium",
+    },
+  ];
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-medium">
-              this is <span className="font-bold text-6xl">Note</span>{" "}
-              <span className="font-bold text-6xl">App</span>.
-            </h1>
-            <p className="py-6 leading-8 tracking-wide">
-              the World finest piece of technology is here. maybe ;)
-              <br />
-              You can <span className="text-lg underline">create</span>,{" "}
-              <span className="text-lg underline">update</span> and{" "}
-              <span className="text-lg underline">delete</span> your notes in
-              here.
-              <br />
-              Don&apos;t worry, We&apos;ll save your data via LocalStorage API,
-              so You&apos;ll never lose them.
-              <br />
-              ❤️
-            </p>
-            <Link href="/notes">
-              <button className="btn btn-primary">Get Started</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <LayoutContainer notes={notes} />
     </>
   );
 };
