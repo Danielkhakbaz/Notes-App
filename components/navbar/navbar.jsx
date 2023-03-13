@@ -23,7 +23,9 @@ const Navbar = ({ theme, setTheme }) => {
             <button className="btn btn-ghost">Notes</button>
           </Link>
           {path === "notes" && (
-            <button className="btn btn-success">Add Note</button>
+            <label htmlFor="modal-add" className="btn btn-success">
+              Add Note
+            </label>
           )}
           <label className="swap swap-rotate btn btn-ghost text-xl">
             <input
