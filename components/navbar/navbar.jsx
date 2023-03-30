@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdDarkMode, MdLightMode } from "react-icons/md";

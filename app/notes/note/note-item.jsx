@@ -1,6 +1,6 @@
 import { MdDelete } from "react-icons/md";
 
-const LayoutItem = ({ note, index }) => {
+const NoteItem = ({ note, index }) => {
   return (
     <>
       <label
@@ -29,4 +29,4 @@ const LayoutItem = ({ note, index }) => {
   );
 };
 
-export default LayoutItem;
+export default NoteItem;

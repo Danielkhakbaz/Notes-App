@@ -1,10 +1,10 @@
-import { Fragment } from "react";
-import LayoutItem from "app/notes/layout/layout-item";
+import React from "react";
+import NoteItem from "app/notes/note/note-item";
 import EditModal from "components/modals/edit-modal/edit-modal";
 import DeleteModal from "components/modals/delete-modal/delete-modal";
 import AddModal from "components/modals/add-modal/add-modal";
 
-const LayoutContainer = ({ notes }) => {
+const NoteContainer = ({ notes }) => {
   return (
     <>
       <div
@@ -15,11 +15,11 @@ const LayoutContainer = ({ notes }) => {
         }}
       >
         {notes?.map((note, index) => (
-          <Fragment key={note.id}>
-            <LayoutItem note={note} index={index} />
+          <React.Fragment key={note.id}>
+            <NoteItem note={note} index={index} />
             <EditModal note={note} index={index} />
             <DeleteModal />
-          </Fragment>
+          </React.Fragment>
         ))}
         <AddModal />
       </div>
@@ -27,4 +27,4 @@ const LayoutContainer = ({ notes }) => {
   );
 };
 
-export default LayoutContainer;
+export default NoteContainer;

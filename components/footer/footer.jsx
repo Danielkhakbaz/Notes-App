@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer footer-center items-center p-4">
-        <div className="grid-flow-col items-center">
+        <div className="flex items-center gap-2">
           <svg
             className="fill-current"
             width="36"
