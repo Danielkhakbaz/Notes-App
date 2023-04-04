@@ -30,7 +30,8 @@ const NotesPage = () => {
     <>
       <NoteContainer
         notes={
-          window !== "undefined" && JSON.parse(localStorage.getItem("notes"))
+          typeof window !== "undefined" &&
+          JSON.parse(localStorage.getItem("notes"))
         }
       />
     </>
