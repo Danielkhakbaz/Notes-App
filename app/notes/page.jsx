@@ -7,8 +7,6 @@ import NoteContainer from "app/notes/note/note-container";
 const NotesPage = () => {
   const router = useRouter();
 
-  const sizes = ["small", "medium", "large"];
-
   useEffect(() => {
     if (!localStorage.getItem("notes")) {
       localStorage.setItem(
@@ -18,18 +16,18 @@ const NotesPage = () => {
             id: uuidv4(),
             title: "Test",
             text: "This text is for text only.",
-            size: sizes[Math.floor(Math.random() * 3)],
+            size: "medium",
           },
         ])
       );
     }
 
     router.refresh();
-  });
+  }, []);
 
   return (
     <>
-      <NoteContainer notes={JSON.parse(localStorage?.getItem("notes"))} />
+      <NoteContainer notes={JSON.parse(localStorage.getItem("notes"))} />
     </>
   );
 };

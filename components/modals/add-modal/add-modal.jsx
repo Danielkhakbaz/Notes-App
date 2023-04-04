@@ -35,6 +35,12 @@ const AddModal = () => {
   const handleClear = () => {
     inputRef.current.value = "";
     textareaRef.current.value = "";
+
+    setNewNote({
+      title: "",
+      text: "",
+      size: sizes[Math.floor(Math.random() * 3)],
+    });
   };
 
   return (

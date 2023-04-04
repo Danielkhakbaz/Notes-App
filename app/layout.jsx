@@ -1,12 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Navbar from "components/navbar/navbar";
+import MobileNavbar from "components/navbar/mobile-navbar";
 import Footer from "components/footer/footer";
 import "styles/tailwindCSS.css";
 
 const RootLayout = ({ children }) => {
   const [theme, setTheme] = useState("light");
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   const path = usePathname().slice(1);
 
@@ -20,7 +26,11 @@ const RootLayout = ({ children }) => {
       )}
       <body>
         <main className="min-h-screen flex flex-col">
-          <Navbar theme={theme} setTheme={setTheme} />
+          {width > 768 ? (
+            <Navbar theme={theme} setTheme={setTheme} />
+          ) : (
+            <MobileNavbar theme={theme} setTheme={setTheme} />
+          )}
           <section className="min-h-screen">{children}</section>
           <Footer />
         </main>

@@ -14,13 +14,17 @@ const NoteContainer = ({ notes }) => {
           justifyContent: "center",
         }}
       >
-        {notes?.map((note, index) => (
-          <React.Fragment key={note.id}>
-            <NoteItem note={note} index={index} />
-            <EditModal note={note} index={index} />
-            <DeleteModal />
-          </React.Fragment>
-        ))}
+        {notes?.length ? (
+          notes.map((note, index) => (
+            <React.Fragment key={note.id}>
+              <NoteItem note={note} index={index} />
+              <EditModal note={note} index={index} />
+              <DeleteModal />
+            </React.Fragment>
+          ))
+        ) : (
+          <p className="text-xl">No notes yet...</p>
+        )}
         <AddModal />
       </div>
     </>

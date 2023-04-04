@@ -1,3 +1,5 @@
+import DeleteModal from "components/modals/delete-modal/delete-modal";
+import EditModal from "components/modals/edit-modal/edit-modal";
 import { MdDelete } from "react-icons/md";
 
 const NoteItem = ({ note, index }) => {
@@ -20,11 +22,16 @@ const NoteItem = ({ note, index }) => {
           <p className="text-sm text-gray-900 py-4">{note.text}</p>
         </div>
         <div className="flex flex-row-reverse gap-3">
-          <label htmlFor="modal-delete" className="btn btn-sm btn-error">
+          <label
+            htmlFor={`modal-delete-${index}`}
+            className="btn btn-sm btn-error"
+          >
             <MdDelete className="text-xl text-white" />
           </label>
         </div>
       </label>
+      <DeleteModal note={note} index={index} />
+      <EditModal note={note} index={index} />
     </>
   );
 };
