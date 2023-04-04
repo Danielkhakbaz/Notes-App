@@ -23,8 +23,8 @@ const NoteItem = ({ note, index }) => {
         </div>
         <div className="flex flex-row-reverse gap-3">
           <label
-            htmlFor={`modal-delete-${index}`}
             className="btn btn-sm btn-error"
+            htmlFor={`modal-delete-${index}`}
           >
             <MdDelete className="text-xl text-white" />
           </label>

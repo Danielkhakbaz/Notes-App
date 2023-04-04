@@ -10,11 +10,11 @@ const RootLayout = ({ children }) => {
   const [theme, setTheme] = useState("light");
   const [width, setWidth] = useState();
 
+  const path = usePathname().slice(1);
+
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-
-  const path = usePathname().slice(1);
 
   return (
     <html lang="en" data-theme={theme}>

@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -51,9 +50,10 @@ const EditModal = ({ note, index }) => {
                   type="text"
                   onChange={(event) =>
                     setEditedNote({
-                      ...note,
+                      ...editedNote,
+                      id: note.id,
                       title: event.currentTarget.value,
-                      text: editedNote.text,
+                      size: note.size,
                     })
                   }
                 />
@@ -69,9 +69,10 @@ const EditModal = ({ note, index }) => {
                   type="text"
                   onChange={(event) =>
                     setEditedNote({
-                      ...note,
-                      title: editedNote.title,
+                      ...editedNote,
+                      id: note.id,
                       text: event.currentTarget.value,
+                      size: note.size,
                     })
                   }
                 />

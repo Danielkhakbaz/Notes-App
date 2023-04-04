@@ -1,7 +1,5 @@
-import React from "react";
+import { Fragment } from "react";
 import NoteItem from "app/notes/note/note-item";
-import EditModal from "components/modals/edit-modal/edit-modal";
-import DeleteModal from "components/modals/delete-modal/delete-modal";
 import AddModal from "components/modals/add-modal/add-modal";
 
 const NoteContainer = ({ notes }) => {
@@ -16,11 +14,9 @@ const NoteContainer = ({ notes }) => {
       >
         {notes?.length ? (
           notes.map((note, index) => (
-            <React.Fragment key={note.id}>
+            <Fragment key={note.id}>
               <NoteItem note={note} index={index} />
-              <EditModal note={note} index={index} />
-              <DeleteModal />
-            </React.Fragment>
+            </Fragment>
           ))
         ) : (
           <p className="text-xl">No notes yet...</p>

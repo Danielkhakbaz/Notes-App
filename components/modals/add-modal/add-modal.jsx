@@ -1,20 +1,17 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 
+const sizes = ["small", "medium", "large"];
+
 const AddModal = () => {
-  const router = useRouter();
-
-  const inputRef = useRef();
-  const textareaRef = useRef();
-
-  const sizes = ["small", "medium", "large"];
-
   const [newNote, setNewNote] = useState({
     title: "",
     text: "",
     size: sizes[Math.floor(Math.random() * 3)],
   });
+
+  const router = useRouter();
 
   const handleSaveButton = () => {
     localStorage.setItem(
@@ -33,9 +30,6 @@ const AddModal = () => {
   };
 
   const handleClear = () => {
-    inputRef.current.value = "";
-    textareaRef.current.value = "";
-
     setNewNote({
       title: "",
       text: "",
@@ -47,11 +41,9 @@ const AddModal = () => {
     <>
       <input id="modal-add" className="modal-toggle" type="checkbox" />
       <label className="modal cursor-pointer" htmlFor="modal-add">
-        <label className="modal-box flex flex-col gap-2 relative" htmlFor="">
+        <label className="modal-box flex flex-col gap-2 relative">
           <h3 className="font-bold text-2xl text-center">
-            {inputRef?.current?.value
-              ? inputRef?.current?.value
-              : "Add a new Note"}
+            {newNote?.title ? newNote?.title : "Add a new Note"}
           </h3>
           <div className="flex flex-col gap-2">
             <div className="form-control w-full max-w-xs">
@@ -60,8 +52,8 @@ const AddModal = () => {
               </label>
               <input
                 className="input input-bordered w-full max-w-xs"
-                ref={inputRef}
                 type="text"
+                value={newNote.title}
                 placeholder="Type the note's title in here..."
                 onChange={(event) =>
                   setNewNote({ ...newNote, title: event.currentTarget.value })
@@ -74,7 +66,8 @@ const AddModal = () => {
               </label>
               <textarea
                 className="textarea textarea-bordered h-24"
-                ref={textareaRef}
+                type="text"
+                value={newNote.text}
                 placeholder="Type the note's text in here..."
                 onChange={(event) =>
                   setNewNote({ ...newNote, text: event.currentTarget.value })
@@ -86,6 +79,7 @@ const AddModal = () => {
             <label
               className="btn btn-success"
               htmlFor="modal-add"
+              disabled={!newNote.title || !newNote.text}
               onClick={() => {
                 handleSaveButton();
                 handleClear();
