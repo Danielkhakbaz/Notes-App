@@ -23,11 +23,16 @@ const NotesPage = () => {
     }
 
     router.refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      <NoteContainer notes={JSON.parse(localStorage.getItem("notes"))} />
+      <NoteContainer
+        notes={
+          window !== "undefined" && JSON.parse(localStorage.getItem("notes"))
+        }
+      />
     </>
   );
 };

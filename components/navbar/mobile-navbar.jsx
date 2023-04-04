@@ -32,20 +32,24 @@ const MobileNavbar = ({ theme, setTheme }) => {
               </Link>
             )}
             {path === "notes" && (
-              <label htmlFor="modal-add" className="btn btn-success">
-                Add Note
-              </label>
+              <li>
+                <label htmlFor="modal-add" className="btn btn-success">
+                  Add Note
+                </label>
+              </li>
             )}
-            <label className="swap swap-rotate btn btn-outline text-xl">
-              <input
-                type="checkbox"
-                onClick={() =>
-                  setTheme(theme === "light" ? "dracula" : "light")
-                }
-              />
-              <MdLightMode className="swap-off fill-current" />
-              <MdDarkMode className="swap-on fill-current" />
-            </label>
+            <li>
+              <label className="swap swap-rotate btn btn-outline text-xl">
+                <input
+                  type="checkbox"
+                  onClick={() =>
+                    setTheme(theme === "light" ? "dracula" : "light")
+                  }
+                />
+                <MdLightMode className="swap-off fill-current" />
+                <MdDarkMode className="swap-on fill-current" />
+              </label>
+            </li>
           </ul>
         </div>
       </nav>
