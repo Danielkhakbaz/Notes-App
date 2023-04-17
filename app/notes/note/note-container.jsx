@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import NoteItem from "app/notes/note/note-item";
-import AddModal from "components/modals/add-modal/add-modal";
+import AddModal from "app/components/modals/add-modal/add-modal";
 
 const NoteContainer = ({ notes }) => {
   return (

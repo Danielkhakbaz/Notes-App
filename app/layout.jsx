@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Navbar from "components/navbar/navbar";
-import MobileNavbar from "components/navbar/mobile-navbar";
-import Footer from "components/footer/footer";
+import Navbar from "app/components/navbar/navbar";
+import MobileNavbar from "app/components/navbar/mobile-navbar";
+import Footer from "app/components/footer/footer";
 import "styles/tailwindCSS.css";
 
 const RootLayout = ({ children }) => {

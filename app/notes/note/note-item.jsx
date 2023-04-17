@@ -1,5 +1,5 @@
-import DeleteModal from "components/modals/delete-modal/delete-modal";
-import EditModal from "components/modals/edit-modal/edit-modal";
+import DeleteModal from "app/components/modals/delete-modal/delete-modal";
+import EditModal from "app/components/modals/edit-modal/edit-modal";
 import { MdDelete } from "react-icons/md";
 
 const NoteItem = ({ note, index }) => {
