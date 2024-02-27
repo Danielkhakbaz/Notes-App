@@ -13,8 +13,8 @@ const NoteItem = ({ note, index }) => {
             note.size === "small"
               ? "span 10"
               : note.size && note.size === "medium"
-              ? "span 20"
-              : "span 30",
+                ? "span 20"
+                : "span 30",
         }}
       >
         <div className="grow">
