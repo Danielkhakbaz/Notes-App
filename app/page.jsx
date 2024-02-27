@@ -2,14 +2,27 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Home | Notes App",
+  description:
+    "a Note-app using LocalStorage API, so your data will never be removed unless you choose to remove it.",
   icons: {
     icon: "/notes-icon.png",
-    shortcut: "/notes-icon.png",
-    apple: "/notes-icon.png",
-    other: {
-      rel: "notes-icon",
-      url: "/notes-icon.png",
-    },
+  },
+  other: {
+    "theme-color": "#000000",
+    "color-scheme": "dark",
+    "twitter:title": "Home | Notes App",
+    "twitter:description":
+      "a Note-app using LocalStorage API, so your data will never be removed unless you choose to remove it.",
+    "twitter:url": "https://danial-notes-app.vercel.app/",
+    "twitter:domain": "danial-notes-app.vercel.app",
+    "twitter:image": "https://danieloo.vercel.app/notes-icon.png",
+    "twitter:card": "summary_large_image",
+    "og:title": "Home | Notes App",
+    "og:description":
+      "a Note-app using LocalStorage API, so your data will never be removed unless you choose to remove it.",
+    "og:url": "https://danial-notes-app.vercel.app/",
+    "og:image": "https://danieloo.vercel.app/notes-icon.png",
+    "og:type": "website",
   },
 };
 
