@@ -2,6 +2,17 @@
   "name": "notes-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Danial Khakbaz<danialkhakbaz.dk@gmail.com>",
+  "description": "Danial Khakbaz's Portfolio built with next.js",
+  "keywords": [
+    "portfolio",
+    "danial khakbaz",
+    "danial",
+    "khakbaz",
+    "Front-end Developer",
+    "Web Developer",
+    "Software Developer"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
