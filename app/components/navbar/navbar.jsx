@@ -26,7 +26,10 @@ const Navbar = ({ theme, setTheme }) => {
               Add Note
             </label>
           )}
-          <label className="swap swap-rotate btn btn-ghost text-xl">
+          <label
+            className="swap swap-rotate btn btn-ghost text-xl"
+            aria-label="theme-controller"
+          >
             <input
               type="checkbox"
               onClick={() => setTheme(theme === "light" ? "dracula" : "light")}
