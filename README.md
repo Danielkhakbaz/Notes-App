@@ -1,4 +1,6 @@
-# Notes App 📝
+# Notes App
+
+<img src="https://github.com/Danielkhakbaz/Danielo-Portfolio/blob/master/public/images/projects/notes-app/screen-shot.png" alt="The screen-shot of the notes app" />
 
 A simple, elegant Notes application built with [Next.js](https://nextjs.org/), providing a smooth and interactive user experience for managing notes. This app utilizes modern frontend technologies like Tailwind CSS and DaisyUI for styling and React Icons for visual consistency.
 
