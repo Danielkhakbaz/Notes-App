@@ -1,6 +1,6 @@
 # Notes App
 
-<img src="https://github.com/Danielkhakbaz/Danielo-Portfolio/blob/master/public/images/projects/notes-app/screen-shot.png" alt="The screen-shot of the notes app" />
+<a href="https://danial-notes-app.vercel.app/" target="_blank"><img src="https://github.com/Danielkhakbaz/Danielo-Portfolio/blob/master/public/images/projects/notes-app/screen-shot.png" alt="The screen-shot of the notes app" /></a>
 
 A simple, elegant Notes application built with [Next.js](https://nextjs.org/), providing a smooth and interactive user experience for managing notes. This app utilizes modern frontend technologies like Tailwind CSS and DaisyUI for styling and React Icons for visual consistency.
 
@@ -59,7 +59,7 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/danielo-portfolio.git
+   git clone https://github.com/Danielkhakbaz/Notes-App
    cd danielo-portfolio
 
 2. **Install dependencies**:
